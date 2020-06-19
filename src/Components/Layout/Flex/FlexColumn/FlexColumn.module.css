@@ -1,0 +1,8 @@
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.alignItemsEnd {
+  align-items: flex-end;
+}

@@ -1,0 +1,49 @@
+.topNav {
+  width: 100vw;
+  background-color: black;
+  letter-spacing: 0.13em;
+  font-weight: 300;
+  height: 3em;
+  position: sticky;
+  top: 0px;
+}
+
+.aboveSticky, .belowSticky {
+  width: 100vw;
+  background-color: black;
+  height: 1em;
+}
+
+.title {
+  font-size: larger;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.child, .child:active, .child:hover, .child:visited {
+  color: #ddd;
+  padding: 0 20px;
+}
+
+.child {
+  transition: text-shadow 0.1s linear, color 0.1s linear;
+  text-shadow: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  justify-content: center;
+}
+
+.child:hover {
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+  color: #fff;
+  transition: text-shadow 0.1s linear, color 0.1s linear;
+}
+
+.child.active {
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+  color: #fff;
+}
+
+.child.active:hover {
+}
