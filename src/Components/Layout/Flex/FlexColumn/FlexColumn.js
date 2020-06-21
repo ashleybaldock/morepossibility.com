@@ -1,32 +1,19 @@
-import React from 'react';
-import styles from './FlexColumn.module.css';
+import React from "react";
+import { FlexBase } from "../FlexBase";
 
 export const FlexColumn = ({
   children,
-  className = '',
-  alignItems = undefined,
-  justifyContent = undefined,
-  flex = undefined,
-  alignItemsEnd = false,
-  flexWrap = 'nowrap',
-  style = {},
+  // className = "",
+  // alignItems = undefined,
+  // justifyContent = undefined,
+  // flex = undefined,
+  // flexWrap = "nowrap",
+  // style = {},
   ...props
 }) => {
   return (
-    <div
-      className={`${styles.flexColumn} ${
-        alignItemsEnd ? styles.alignItemsEnd : ''
-      } ${className}`}
-      style={{
-        flex,
-        alignItems,
-        justifyContent,
-        flexWrap,
-        ...style,
-      }}
-      {...props}
-    >
+    <FlexBase flexDirection={"column"} {...props}>
       {children}
-    </div>
+    </FlexBase>
   );
 };
