@@ -7,7 +7,7 @@ export const TopNav = ({ className = "", children, ...props }) => {
   return (
     <>
       <FlexRow flex={"0 0 auto"} className={styles.aboveSticky}></FlexRow>
-      <FlexRow flex={"0 0 auto"} className={`${styles.topNav} ${className}`}>
+      <FlexRow flex={"0 0 auto"} flexWrap={'wrap'} className={`${styles.topNav} ${className}`}>
         <FlexColumn justifyContent={"center"} className={styles.title}>
           <Link to="/sitemap">More Possibility</Link>
         </FlexColumn>

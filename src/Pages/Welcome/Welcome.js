@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Page, PageHeading, PageParagraph } from "Components";
+import { Page, PageHeading, PageParagraph, SplashImage } from "Components";
 import styles from "./Welcome.module.css";
 
 export const Welcome = ({ className = "", ...props }) => {
   return (
     <>
+      <SplashImage src="/images/dome_soft.jpg" />
       <PageHeading>Welcome</PageHeading>
       <PageParagraph>
         More Possibility is all about creating <Link to={`/tools`}>tools</Link>{" "}

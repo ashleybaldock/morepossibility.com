@@ -7,8 +7,8 @@ export const PageHeading = ({
   ...props
 }) => {
   return (
-    <div className={`${className}`}>
+    <h1 className={`${styles.pageHeading} ${className}`}>
       {children}
-    </div>
+    </h1>
   );
 };

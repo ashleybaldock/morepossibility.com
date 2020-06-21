@@ -9,7 +9,7 @@ export const Page = ({
   ...props
 }) => {
   return (
-    <FlexColumn className={`${styles.page} ${className}`}>
+    <FlexColumn alignItems={'stretch'} justifyContent={'center'} className={`${styles.page} ${className}`}>
       {children}
     </FlexColumn>
   );
