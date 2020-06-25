@@ -1,11 +1,11 @@
-import React from "react";
-import { FlexColumn, FlexRow } from "Components"; // TODO move
-import styles from "./SplashImage.module.css";
+import React from 'react';
+import { FlexRow } from 'entropy-ui';
+import styles from './SplashImage.module.css';
 
 export const SplashImage = ({
   src,
-  alt = "",
-  className = "",
+  alt = '',
+  className = '',
   children,
   ...props
 }) => {

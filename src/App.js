@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Art,
   Blog,
@@ -13,17 +13,21 @@ import {
   Sitemap,
   SixOrNot,
   Welcome,
-} from "./Pages";
-import { Page, TopNav } from "Components";
-import { FlexColumn, FlexRow } from "Components"; // TODO move
-import styles from "./App.module.css";
+} from './Pages';
+import { Page, TopNav } from 'Components';
+import { FlexColumn } from 'entropy-ui';
+import styles from './App.module.css';
 
-import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <FlexColumn flex={'1 1 0'} justifyContent={'flex-start'} className={`${styles.app} ${styles.background}`}>
+      <FlexColumn
+        flex={'1 1 0'}
+        justifyContent={'flex-start'}
+        className={`${styles.app} ${styles.background}`}
+      >
         <TopNav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/me">About</NavLink>
@@ -34,7 +38,7 @@ export const App = () => {
         </TopNav>
         <Page>
           <Switch>
-            <Route exact path={["/welcome", "/"]}>
+            <Route exact path={['/welcome', '/']}>
               <Welcome />
             </Route>
             <Route path="/sitemap">
