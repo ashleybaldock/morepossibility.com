@@ -91,9 +91,7 @@ export const App = () => {
             </Route>
           </Switch>
           <FlexSpacer />
-          <Footer>
-            Copyright Ashley Baldock 2020. All rights reserved.
-          </Footer>
+          <Footer>Copyright Ashley Baldock 2020. All rights reserved.</Footer>
         </Page>
       </FlexColumn>
     </BrowserRouter>

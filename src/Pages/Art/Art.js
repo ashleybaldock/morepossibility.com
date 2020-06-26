@@ -8,7 +8,7 @@ import {
   PageSection,
 } from 'Components';
 
-export const Art = ({ className = '', ...props }) => {
+export const Art = ({ className = '' }) => {
   return (
     <PageSection>
       <PageHeading>Art projects</PageHeading>

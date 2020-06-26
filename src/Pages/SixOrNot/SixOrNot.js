@@ -240,42 +240,28 @@ const sections = [
       </>
     ),
   },
-  {
-    anchor: 'usage',
-    heading: 'Usage',
-    content: [
-      {
-        anchor: 'basic-usage',
-        heading: 'Basic',
-        content: (
-          <PageParagraph>
-            The SixOrNot icon can be displayed via an address bar icon or a
-            button (which may be placed wherever you like in the Firefox UI).
-            The icon indicates whether the main domain of the site you are
-            viewing supports IPv6 and whether your browser used IPv6 to connect
-            to it. SixOrNot looks at each connection Firefox makes and notes
-            whether it was made using IPv4 or IPv6, the information is then
-            displayed via a handy tooltip.
-          </PageParagraph>
-        ),
-      },
-      {
-        anchor: 'advanced-usage',
-        heading: 'Advanced',
-        content: (
-          <PageParagraph>
-            The SixOrNot icon can be displayed via an address bar icon or a
-            button (which may be placed wherever you like in the Firefox UI).
-            The icon indicates whether the main domain of the site you are
-            viewing supports IPv6 and whether your browser used IPv6 to connect
-            to it. SixOrNot looks at each connection Firefox makes and notes
-            whether it was made using IPv4 or IPv6, the information is then
-            displayed via a handy tooltip.
-          </PageParagraph>
-        ),
-      },
-    ],
-  },
+  // {
+  //   anchor: 'usage',
+  //   heading: 'Usage',
+  //   content: [
+  //     {
+  //       anchor: 'basic-usage',
+  //       heading: 'Basic',
+  //       content: (
+  //         <PageParagraph>
+  //         </PageParagraph>
+  //       ),
+  //     },
+  //     {
+  //       anchor: 'advanced-usage',
+  //       heading: 'Advanced',
+  //       content: (
+  //         <PageParagraph>
+  //         </PageParagraph>
+  //       ),
+  //     },
+  //   ],
+  // },
 ];
 
 const wrapWithHashLink = (text, anchor) => {
