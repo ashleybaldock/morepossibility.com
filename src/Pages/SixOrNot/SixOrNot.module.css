@@ -1,0 +1,46 @@
+.noBullet {
+  list-style: none;
+}
+
+.emphasis {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.idAnchor {
+  display: block;
+  content: " ";
+  margin-top: calc(-3em + 0.5em);
+  height: calc(3em + 0.5em);
+  visibility: hidden;
+}
+
+.subHeading1 {
+  font-size: 130%;
+  margin: 1.4em 0 0.8em 0;
+  letter-spacing: 0.13em;
+}
+.subHeading2 {
+  font-size: 120%;
+  margin: 1.4em 0 0.8em 0;
+  letter-spacing: 0.13em;
+}
+
+.monospaced {
+  font-family: monospace;
+}
+
+.quoteBlock {
+  border: 1px solid #333;
+  background-color: #111;
+  padding: 10px;
+  margin: 10px;
+}
+
+.imageCentered {
+  margin: 0.8em 0;
+  align-self: center;
+}
+.imageCentered > img {
+  max-width: 80vw;
+}

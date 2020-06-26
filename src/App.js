@@ -5,17 +5,20 @@ import {
   Code,
   Contact,
   EntropyUI,
+  Localhost,
   Magiclights,
   Me,
   NoMatch,
   Phenoforge,
+  PhenoforgeMkI,
+  PhenoforgeMkII,
   Services,
   Sitemap,
   SixOrNot,
   Welcome,
 } from './Pages';
-import { Page, TopNav } from 'Components';
-import { FlexColumn } from 'entropy-ui';
+import { Footer, Page, TopNav } from 'Components';
+import { FlexColumn, FlexSpacer } from 'entropy-ui';
 import styles from './App.module.css';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
@@ -53,6 +56,12 @@ export const App = () => {
             <Route path="/blog">
               <Blog />
             </Route>
+            <Route path="/art/phenoforge1">
+              <PhenoforgeMkI />
+            </Route>
+            <Route path="/art/phenoforge2">
+              <PhenoforgeMkII />
+            </Route>
             <Route path="/art/phenoforge">
               <Phenoforge />
             </Route>
@@ -68,6 +77,9 @@ export const App = () => {
             <Route path="/code/sixornot">
               <SixOrNot />
             </Route>
+            <Route path="/code/localhost">
+              <Localhost />
+            </Route>
             <Route path="/code">
               <Code />
             </Route>
@@ -78,6 +90,10 @@ export const App = () => {
               <NoMatch />
             </Route>
           </Switch>
+          <FlexSpacer />
+          <Footer>
+            Copyright Ashley Baldock 2020. All rights reserved.
+          </Footer>
         </Page>
       </FlexColumn>
     </BrowserRouter>

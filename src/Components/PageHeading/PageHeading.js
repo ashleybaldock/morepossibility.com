@@ -1,14 +1,16 @@
 import React from 'react';
+import { FlexRow } from 'entropy-ui';
 import styles from './PageHeading.module.css';
 
-export const PageHeading = ({
-  className = '',
-  children,
-  ...props
-}) => {
+const wrapper = <h1>.</h1>;
+
+export const PageHeading = ({ className = '', children, ...props }) => {
   return (
-    <h1 className={`${styles.pageHeading} ${className}`}>
+    <FlexRow
+      wrapperElement={wrapper}
+      className={`${styles.pageHeading} ${className}`}
+    >
       {children}
-    </h1>
+    </FlexRow>
   );
 };

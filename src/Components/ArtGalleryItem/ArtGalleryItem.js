@@ -1,14 +1,12 @@
 import React from 'react';
+import { FlexRow } from 'entropy-ui';
 import styles from './ArtGalleryItem.module.css';
 
-export const ArtGalleryItem = ({
-  className = '',
-  children,
-  ...props
-}) => {
+export const ArtGalleryItem = ({ className = '', src, name, ...props }) => {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
+    <FlexRow className={`${className}`}>
+      <img src={src} alt={name} />
+      {name}
+    </FlexRow>
   );
 };
