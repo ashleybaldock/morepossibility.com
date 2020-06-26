@@ -11,15 +11,16 @@ import {
 export const Code = ({ className = '' }) => {
   return (
     <PageSection>
-      <PageHeading>Art projects</PageHeading>
+      <PageHeading>Code projects</PageHeading>
       <PageParagraph>
-        I like to create art using software and LED lighting.
+        See also my GitHub profile:{' '}
+        <a href="https://github.com/ashleybaldock">github.com/ashleybaldock</a>.
       </PageParagraph>
       <ArtGallery>
         <Link to={`/code/sixornot`}>
           <ArtGalleryItem
-            src={`/images/art/phenoforge2/3d-model-1.png`}
-            name={`Phenoforge Mk.II - 2021`}
+            src={`/images/code/sixornot/sixornot_6only_c_256.png`}
+            name={`SixOrNot`}
           />
         </Link>
       </ArtGallery>
