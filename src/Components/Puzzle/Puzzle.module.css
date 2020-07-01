@@ -1,7 +1,12 @@
 .theSVG {
 }
+.svgContents {
+  transform-origin: center;
+  transform: translate(0, -37px) scale(1.37);
+}
 
 .cube {
+  transform-origin: center;
   fill: black;
 }
 

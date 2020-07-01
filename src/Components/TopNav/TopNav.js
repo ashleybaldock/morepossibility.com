@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlexColumn, FlexRow, FlexSpacer } from 'entropy-ui';
+import { Puzzle } from 'Components';
 import { Link } from 'react-router-dom';
 import styles from './TopNav.module.css';
 
@@ -13,8 +14,14 @@ export const TopNav = ({ className = '', children, ...props }) => {
         wrapperElement={navWrapper}
         flex={'0 0 auto'}
         flexWrap={'wrap'}
+        alignItems={'stretch'}
         className={`${styles.topNav} ${className}`}
       >
+        <FlexColumn
+          alignSelf={'center'}
+          wrapperElement={<Puzzle />}
+          className={styles.logo}
+        ></FlexColumn>
         <FlexColumn justifyContent={'center'} className={styles.title}>
           <Link to="/sitemap">More Possibility</Link>
         </FlexColumn>

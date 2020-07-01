@@ -3,7 +3,7 @@
   background-color: black;
   letter-spacing: 0.13em;
   font-weight: 300;
-  height: 3em;
+  height: 3.6em;
   position: sticky;
   top: 0px;
 }
@@ -17,12 +17,11 @@
 .title {
   font-size: larger;
   color: #fff;
-  padding: 0 20px;
 }
 
 .child, .child:active, .child:hover, .child:visited {
   color: #ddd;
-  padding: 0 20px;
+  padding: 0 1em;
 }
 
 .child {
@@ -46,4 +45,24 @@
 }
 
 .child.active:hover {
+}
+
+.logoBackground {
+  position: fixed;
+  left: -1.5em;
+  top: -2.5em;
+  width: 8em;
+  font-size: larger;
+}
+
+.x {
+  border-left: 4em solid transparent;
+  border-right: 4em solid transparent;
+  border-top: 4em solid black;
+}
+
+.logo {
+  height: 3em;
+  padding: 0 1em;
+  align-self: center;
 }
