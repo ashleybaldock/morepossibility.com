@@ -4,12 +4,12 @@ import {
   PageHeading,
   PageParagraph,
   PageSection,
-  SplashImage,
+  ImageSplash,
 } from 'Components';
 export const Welcome = ({ className = '', ...props }) => {
   return (
     <>
-      <SplashImage src="/images/dome_soft.jpg" />
+      <ImageSplash src="/images/dome_soft.jpg" />
       <PageSection>
         <PageHeading>Welcome</PageHeading>
         <PageParagraph>

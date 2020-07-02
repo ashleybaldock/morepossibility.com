@@ -1,38 +1,18 @@
 import React from 'react';
 import {
+  LicenceBlock,
   PageHeading,
-  // PageSubHeading,
+  PageSubHeading1,
+  PageSubHeading2,
   PageParagraph,
   PageSection,
-  // Permalink,
+  Permalink,
+  TableOfContents,
+  TextEmphasis,
 } from 'Components';
-import { FlexColumn, FlexRow } from 'entropy-ui';
+import { FlexColumn } from 'entropy-ui';
 import { HashLink } from 'react-router-hash-link';
 import styles from './SixOrNot.module.css';
-
-const TextEmphasis = ({ children }) => {
-  return <span className={styles.emphasis}>{children}</span>;
-};
-
-export const ClassInjector = ({ children, className, ...props }) => {
-  return React.Children.map(children, (child) =>
-    React.cloneElement(child, {
-      className: `${
-        child.props.className ? child.props.className : ''
-      } ${className}`,
-    })
-  );
-};
-
-const Monospaced = ({ children }) => {
-  return (
-    <ClassInjector className={styles.monospaced}>{children}</ClassInjector>
-  );
-};
-
-const QuoteBlock = ({ children }) => {
-  return <FlexColumn className={styles.quoteBlock}>{children}</FlexColumn>;
-};
 
 const ImageCentered = ({ src, alt, className, ...props }) => {
   return (
@@ -192,142 +172,61 @@ const sections = [
     heading: 'SixOrNot Licence',
     content: (
       <>
-        <QuoteBlock>
-          <Monospaced>
-            <PageParagraph>
-              Copyright © 2008-2020 Ashley Baldock. All Rights Reserved.
-            </PageParagraph>
-            <PageParagraph>
-              Redistribution and use in source and binary forms, with or without
-              modification, are permitted provided that the following conditions
-              are met:
-            </PageParagraph>
-            <PageParagraph>
-              1. Redistributions of source code must retain the above copyright
-              notice, this list of conditions and the following disclaimer.
-            </PageParagraph>
-            <PageParagraph>
-              2. Redistributions in binary form must reproduce the above
-              copyright notice, this list of conditions and the following
-              disclaimer in the documentation and/or other materials provided
-              with the distribution.
-            </PageParagraph>
-            <PageParagraph>
-              3. The name of the author may not be used to endorse or promote
-              products derived from this software without specific prior written
-              permission from the author.
-            </PageParagraph>
-            <PageParagraph>
-              4. Products derived from this software may not be called
-              "SixOrNot" nor may "SixOrNot" appear in their names without
-              specific prior written permission from the author.
-            </PageParagraph>
-            <PageParagraph>
-              THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
-              IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-              WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-              ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
-              DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-              DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
-              GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-              INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-              WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-              NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-              SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-            </PageParagraph>
-          </Monospaced>
-        </QuoteBlock>
+        <LicenceBlock>
+          <PageParagraph>
+            Copyright © 2008-2020 Ashley Baldock. All Rights Reserved.
+          </PageParagraph>
+          <PageParagraph>
+            Redistribution and use in source and binary forms, with or without
+            modification, are permitted provided that the following conditions
+            are met:
+          </PageParagraph>
+          <PageParagraph>
+            1. Redistributions of source code must retain the above copyright
+            notice, this list of conditions and the following disclaimer.
+          </PageParagraph>
+          <PageParagraph>
+            2. Redistributions in binary form must reproduce the above copyright
+            notice, this list of conditions and the following disclaimer in the
+            documentation and/or other materials provided with the distribution.
+          </PageParagraph>
+          <PageParagraph>
+            3. The name of the author may not be used to endorse or promote
+            products derived from this software without specific prior written
+            permission from the author.
+          </PageParagraph>
+          <PageParagraph>
+            4. Products derived from this software may not be called "SixOrNot"
+            nor may "SixOrNot" appear in their names without specific prior
+            written permission from the author.
+          </PageParagraph>
+          <PageParagraph>
+            THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+            IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+            WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+            ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+            DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+            DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+            GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+            INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+            IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+            OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+            IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+          </PageParagraph>
+        </LicenceBlock>
       </>
     ),
   },
-  // {
-  //   anchor: 'usage',
-  //   heading: 'Usage',
-  //   content: [
-  //     {
-  //       anchor: 'basic-usage',
-  //       heading: 'Basic',
-  //       content: (
-  //         <PageParagraph>
-  //         </PageParagraph>
-  //       ),
-  //     },
-  //     {
-  //       anchor: 'advanced-usage',
-  //       heading: 'Advanced',
-  //       content: (
-  //         <PageParagraph>
-  //         </PageParagraph>
-  //       ),
-  //     },
-  //   ],
-  // },
 ];
 
 const wrapWithHashLink = (text, anchor) => {
   return <HashLink to={`#${anchor}`}>{text}</HashLink>;
 };
 
-const TableOfContents = ({
-  data,
-  anchorKey,
-  headingKey,
-  contentKey,
-  wrapLink = (text, anchor) => <a href={`#${anchor}`}>{text}</a>,
-}) => {
-  return (
-    <ul className={styles.tocLevel}>
-      {data.map((section) => (
-        <>
-          <li className={styles.tocLevelInner}>
-            {wrapLink(section[headingKey], section[anchorKey])}
-          </li>
-          {Array.isArray(section[contentKey]) && (
-            <li className={styles.noBullet}>
-              <TableOfContents
-                key={section[anchorKey]}
-                data={section[contentKey]}
-                anchorKey={anchorKey}
-                headingKey={headingKey}
-                contentKey={contentKey}
-              />
-            </li>
-          )}
-        </>
-      ))}
-    </ul>
-  );
-};
-
-const PageSubHeading1 = ({ children }) => {
-  return (
-    <FlexRow className={styles.subHeading1} wrapperElement={<h2>.</h2>}>
-      {children}
-    </FlexRow>
-  );
-};
-
-const PageSubHeading2 = ({ children }) => {
-  return (
-    <FlexRow className={styles.subHeading2} wrapperElement={<h3>.</h3>}>
-      {children}
-    </FlexRow>
-  );
-};
-
-const Permalink = ({ hash, children }) => {
-  return (
-    <>
-      <div className={styles.idAnchor} id={hash}></div>
-      {children}
-    </>
-  );
-};
-
 export const SixOrNot = ({ ...props }) => {
   return (
     <PageSection>
-      <PageHeading>SixOrNot</PageHeading>
+      <PageHeading>Code &gt; SixOrNot</PageHeading>
       <TableOfContents
         data={sections}
         anchorKey={'anchor'}

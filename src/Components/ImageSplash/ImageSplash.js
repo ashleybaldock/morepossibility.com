@@ -1,8 +1,8 @@
 import React from 'react';
 import { FlexRow } from 'entropy-ui';
-import styles from './SplashImage.module.css';
+import styles from './ImageSplash.module.css';
 
-export const SplashImage = ({
+export const ImageSplash = ({
   src,
   alt = '',
   className = '',

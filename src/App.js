@@ -23,6 +23,25 @@ import styles from './App.module.css';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
+// TODO use to generate breadcrumbs
+const routes = [
+  { path: ['/welcome', '/'], exact: true, name: 'Welcome', component: Welcome, },
+  { path: '/sitemap', name: 'Sitemap', component: Sitemap, },
+  { path: '/me/services', name: 'Development Services', shortName: 'Services', component: Services, },
+  { path: '/me', name: 'About Me', shortName: 'About', component: Me, },
+  { path: '/blog', name: 'Blog', component: Blog, },
+  { path: '/art/phenoforge2', name: 'Phenoforge Mk.II', component: PhenoforgeMkII, },
+  { path: '/art/phenoforge1', name: 'Phenoforge Mk.I', component: PhenoforgeMkI, },
+  { path: '/art/phenoforge', name: 'Phenoforge', component: Phenoforge, },
+  { path: '/art', name: 'Art', component: Art, },
+  { path: '/code/entropy-ui', name: 'Entropy UI', component: EntropyUI, },
+  { path: '/code/magiclights', name: 'Magiclights', component: Magiclights, },
+  { path: '/code/sixornot', name: 'SixOrNot', component: SixOrNot, },
+  { path: '/code/localhost', name: 'This Site', component: Localhost, },
+  { path: '/code', name: 'Code', component: Code, },
+  { path: '/contact', name: 'Contact', component: Contact, },
+];
+
 export const App = () => {
   return (
     <BrowserRouter>
@@ -41,51 +60,9 @@ export const App = () => {
         </TopNav>
         <Page>
           <Switch>
-            <Route exact path={['/welcome', '/']}>
-              <Welcome />
-            </Route>
-            <Route path="/sitemap">
-              <Sitemap />
-            </Route>
-            <Route path="/me/services">
-              <Services />
-            </Route>
-            <Route path="/me">
-              <Me />
-            </Route>
-            <Route path="/blog">
-              <Blog />
-            </Route>
-            <Route path="/art/phenoforge1">
-              <PhenoforgeMkI />
-            </Route>
-            <Route path="/art/phenoforge2">
-              <PhenoforgeMkII />
-            </Route>
-            <Route path="/art/phenoforge">
-              <Phenoforge />
-            </Route>
-            <Route path="/art">
-              <Art />
-            </Route>
-            <Route path="/code/entropy-ui">
-              <EntropyUI />
-            </Route>
-            <Route path="/code/magiclights">
-              <Magiclights />
-            </Route>
-            <Route path="/code/sixornot">
-              <SixOrNot />
-            </Route>
-            <Route path="/code/localhost">
-              <Localhost />
-            </Route>
-            <Route path="/code">
-              <Code />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
+            {routes.map(({ path, exact = false, component }, key) => (
+              <Route exact={exact} path={path} key={key} render={component} />
+            ))}
             <Route>
               <NoMatch />
             </Route>
