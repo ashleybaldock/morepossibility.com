@@ -1,11 +1,12 @@
-import React from "react";
-import { Puzzle, PuzzlePiece } from "Components";
-import { Link } from "react-router-dom";
-import styles from "./Sitemap.module.css";
+import React from 'react';
+import { FlexColumn } from 'entropy-ui';
+import { Puzzle, PuzzlePiece } from 'Components';
+import { Link } from 'react-router-dom';
+import styles from './Sitemap.module.css';
 
-export const Sitemap = ({ className = "", children, ...props }) => {
+export const Sitemap = ({ className = '', children, ...props }) => {
   return (
-    <div className={`${className}`}>
+    <FlexColumn className={`${styles.c} ${className}`}>
       <Puzzle
         a={<PuzzlePiece name={`Welcome`} link={<Link path={`/welcome`} />} />}
         b={<PuzzlePiece name={`Me`} link={<Link path={`/me`} />} />}
@@ -59,6 +60,6 @@ export const Sitemap = ({ className = "", children, ...props }) => {
           />
         }
       />
-    </div>
+    </FlexColumn>
   );
 };
