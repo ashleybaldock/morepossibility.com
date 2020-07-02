@@ -10,7 +10,7 @@ import {
 
 export const Art = ({ className = '' }) => {
   return (
-    <PageSection>
+    <PageSection className={className}>
       <PageHeading>Art projects</PageHeading>
       <PageParagraph>
         I like to create art using software and LED lighting.
