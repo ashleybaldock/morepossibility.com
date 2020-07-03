@@ -1,4 +1,4 @@
-.topNav {
+.sticky {
   width: 100vw;
   background-color: black;
   letter-spacing: 0.13em;
@@ -17,52 +17,149 @@
 .title {
   font-size: larger;
   color: #fff;
+  white-space: nowrap;
 }
 
-.child, .child:active, .child:hover, .child:visited {
+.navLink, .navLink:active, .navLink:hover, .navLink:visited {
   color: #ddd;
-  padding: 0 1em;
+  padding: 1em 2em 1em 6em;
+  text-align: right;
 }
-
-.child {
+.navLink {
   transition: text-shadow 0.1s linear, color 0.1s linear;
   text-shadow: none;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 0;
-  justify-content: center;
 }
-
-.child:hover {
+.navLink:hover {
   text-shadow: 0 0 1px #fff, 0 0 1px #fff;
   color: #fff;
   transition: text-shadow 0.1s linear, color 0.1s linear;
 }
-
-.child.active {
+.navLink.active {
   text-shadow: 0 0 1px #fff, 0 0 1px #fff;
   color: #fff;
 }
-
-.child.active:hover {
+.navLink.active:hover {
 }
 
-.logoBackground {
-  position: fixed;
-  left: -1.5em;
-  top: -2.5em;
-  width: 8em;
-  font-size: larger;
+.mainMenu {
+  position: absolute;
+  z-index: 1000;
+  top: 3.6em;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);;
+  background-color: black;
 }
 
-.x {
-  border-left: 4em solid transparent;
-  border-right: 4em solid transparent;
-  border-top: 4em solid black;
+.mainMenuList {
+  display: none;
+  flex-direction: column;
+  flex: 0 0 0;
+}
+
+:target .mainMenuList {
+  display: flex;
+}
+
+@media (min-width: 900px) {
+  .mainMenu {
+    position: static;
+  }
+
+  .mainMenuList {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navLink, .navLink:active, .navLink:hover, .navLink:visited {
+    color: #ddd;
+    padding: 0 1em;
+  }
+  .navLink {
+    transition: text-shadow 0.1s linear, color 0.1s linear;
+    text-shadow: none;
+  }
+  .navLink:hover {
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+    color: #fff;
+    transition: text-shadow 0.1s linear, color 0.1s linear;
+  }
+  .navLink.active {
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+    color: #fff;
+  }
+  .navLink.active:hover {
+  }
 }
 
 .logo {
   height: 3em;
   padding: 0 1em;
   align-self: center;
+}
+
+.topNav {
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+}
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamLine {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+.hamLine:last-child {
+  margin-bottom: 0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.backdrop {
+  position: absolute;
+  position: fixed;
+  display: block;
+  right: 100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #000;
+  background: rgba(0,0,0,.2);
+  cursor: default;
+}
+
+@media (min-width: 900px) {
+  .backdrop, :target .backdrop {
+    display: none;
+  }
+}
+
+:target .backdrop,
+#om[aria-expanded="true"] .backdrop {
+  right: 0;
 }

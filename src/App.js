@@ -25,21 +25,34 @@ import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 // TODO use to generate breadcrumbs
 const routes = [
-  { path: ['/welcome', '/'], exact: true, name: 'Welcome', component: Welcome, },
-  { path: '/sitemap', name: 'Sitemap', component: Sitemap, },
-  { path: '/me/services', name: 'Development Services', shortName: 'Services', component: Services, },
-  { path: '/me', name: 'About Me', shortName: 'About', component: Me, },
-  { path: '/blog', name: 'Blog', component: Blog, },
-  { path: '/art/phenoforge2', name: 'Phenoforge Mk.II', component: PhenoforgeMkII, },
-  { path: '/art/phenoforge1', name: 'Phenoforge Mk.I', component: PhenoforgeMkI, },
-  { path: '/art/phenoforge', name: 'Phenoforge', component: Phenoforge, },
-  { path: '/art', name: 'Art', component: Art, },
-  { path: '/code/entropy-ui', name: 'Entropy UI', component: EntropyUI, },
-  { path: '/code/magiclights', name: 'Magiclights', component: Magiclights, },
-  { path: '/code/sixornot', name: 'SixOrNot', component: SixOrNot, },
-  { path: '/code/localhost', name: 'This Site', component: Localhost, },
-  { path: '/code', name: 'Code', component: Code, },
-  { path: '/contact', name: 'Contact', component: Contact, },
+  { path: ['/welcome', '/'], exact: true, name: 'Welcome', component: Welcome },
+  { path: '/sitemap', name: 'Sitemap', component: Sitemap },
+  {
+    path: '/me/services',
+    name: 'Development Services',
+    shortName: 'Services',
+    component: Services,
+  },
+  { path: '/me', name: 'About Me', shortName: 'About', component: Me },
+  { path: '/blog', name: 'Blog', component: Blog },
+  {
+    path: '/art/phenoforge2',
+    name: 'Phenoforge Mk.II',
+    component: PhenoforgeMkII,
+  },
+  {
+    path: '/art/phenoforge1',
+    name: 'Phenoforge Mk.I',
+    component: PhenoforgeMkI,
+  },
+  { path: '/art/phenoforge', name: 'Phenoforge', component: Phenoforge },
+  { path: '/art', name: 'Art', component: Art },
+  { path: '/code/entropy-ui', name: 'Entropy UI', component: EntropyUI },
+  { path: '/code/magiclights', name: 'Magiclights', component: Magiclights },
+  { path: '/code/sixornot', name: 'SixOrNot', component: SixOrNot },
+  { path: '/code/localhost', name: 'This Site', component: Localhost },
+  { path: '/code', name: 'Code', component: Code },
+  { path: '/contact', name: 'Contact', component: Contact },
 ];
 
 export const App = () => {
@@ -48,7 +61,8 @@ export const App = () => {
       <FlexColumn
         flex={'1 1 0'}
         justifyContent={'flex-start'}
-        className={`${styles.app} ${styles.background}`}
+        className={styles.app}
+        id="om"
       >
         <TopNav>
           <NavLink to="/">Home</NavLink>
