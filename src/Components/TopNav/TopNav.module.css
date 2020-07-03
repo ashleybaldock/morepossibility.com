@@ -23,7 +23,6 @@
 .navLink, .navLink:active, .navLink:hover, .navLink:visited {
   color: #ddd;
   padding: 1em 2em 1em 6em;
-  text-align: right;
 }
 .navLink {
   transition: text-shadow 0.1s linear, color 0.1s linear;
@@ -44,19 +43,31 @@
 .mainMenu {
   position: absolute;
   z-index: 1000;
-  top: 3.6em;
+  top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);;
   background-color: black;
 }
 
 .mainMenuList {
-  display: none;
+  display: flex;
   flex-direction: column;
   flex: 0 0 0;
 }
 
-:target .mainMenuList {
+.menuItem, .menuHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.menuItem {
+  display: none;
+  z-index: 1000;
+}
+
+.menuTarget:target ~ .sticky .menuItem,
+.menuOpen .menuItem {
   display: flex;
 }
 
@@ -65,8 +76,11 @@
     position: static;
   }
 
-  .mainMenuList {
+  .menuItem {
     display: flex;
+  }
+
+  .mainMenuList {
     flex-direction: row;
   }
 
@@ -103,26 +117,52 @@
 .hamburger {
   display: flex;
   flex-direction: column;
-  padding: 0 1em;
+  margin-top: 0.1em;
+  padding: 1em 2em 1em 6em;
+  align-items: flex-end;
 }
 @media (min-width: 900px) {
   .hamburger {
     display: none;
   }
 }
+.menuTarget:target ~ .sticky .backdrop,
+.menuOpen .backdrop {
+  right: 0;
+}
 .hamLine {
   display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+  width: 1.8em;
+  height: 0.18em;
+  margin-bottom: 0.35em;
   position: relative;
   background: #cdcdcd;
-  border-radius: 3px;
+  border-radius: 999px;
   z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.25s ease;
+}
+.hamLine:nth-child(1) {
+  transform-origin: 0% 0%;
+}
+.hamLine:nth-child(4) {
+  transform-origin: 0% 100%;
+}
+.menuTarget:target ~ .sticky .hamLine:nth-child(1),
+.menuOpen .hamLine:nth-child(1) {
+  opacity: 1;
+  transform: translate(18%, -0.08em) rotate(45deg);
+}
+.menuTarget:target ~ .sticky .hamLine:nth-child(2),
+.menuOpen .hamLine:nth-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menuTarget:target ~ .sticky .hamLine:nth-child(3),
+.menuOpen .hamLine:nth-child(4) {
+  opacity: 1;
+  transform: translate(18%, 0.08em) rotate(-45deg);
 }
 .hamLine:last-child {
   margin-bottom: 0;
@@ -148,18 +188,18 @@
   width: 100%;
   height: 100%;
   z-index: 998;
-  background: #000;
-  background: rgba(0,0,0,.2);
   cursor: default;
 }
 
 @media (min-width: 900px) {
-  .backdrop, :target .backdrop {
+  .backdrop,
+  .menuTarget:target ~ .backdrop,
+  .menuOpen .backdrop {
     display: none;
   }
 }
 
-:target .backdrop,
-#om[aria-expanded="true"] .backdrop {
+.menuTarget:target ~ .sticky .backdrop,
+.menuOpen .backdrop {
   right: 0;
 }

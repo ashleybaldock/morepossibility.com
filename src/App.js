@@ -62,7 +62,6 @@ export const App = () => {
         flex={'1 1 0'}
         justifyContent={'flex-start'}
         className={styles.app}
-        id="om"
       >
         <TopNav>
           <NavLink to="/">Home</NavLink>
