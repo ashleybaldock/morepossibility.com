@@ -1,2 +1,9 @@
 .app {
 }
+
+.footer > * {
+  margin-right: 1em;
+}
+.footer > *:last-child {
+  margin-right: 0;
+}

@@ -17,7 +17,17 @@ import {
   SixOrNot,
   Welcome,
 } from './Pages';
-import { Footer, Page, TopNav } from 'Components';
+import {
+  CircleFrame,
+  InstagramIcon,
+  FacebookIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  YouTubeIcon,
+  Footer,
+  Page,
+  TopNav,
+} from 'Components';
 import { FlexColumn, FlexSpacer } from 'entropy-ui';
 import styles from './App.module.css';
 
@@ -81,7 +91,33 @@ export const App = () => {
             </Route>
           </Switch>
           <FlexSpacer />
-          <Footer>Copyright Ashley Baldock 2020. All rights reserved.</Footer>
+          <Footer className={styles.footer}>
+            <a href="https://www.instagram.com/more.possibility">
+              <CircleFrame>
+                <InstagramIcon />
+              </CircleFrame>
+            </a>
+            <a href="https://www.youtube.com/channel/UC_xZBH-1MsJkh3S-u5TttJA">
+              <CircleFrame>
+                <YouTubeIcon />
+              </CircleFrame>
+            </a>
+            <a href="https://github.com/ashleybaldock">
+              <CircleFrame>
+                <GitHubIcon />
+              </CircleFrame>
+            </a>
+            <a href="https://www.facebook.com/morepossibility">
+              <CircleFrame>
+                <FacebookIcon />
+              </CircleFrame>
+            </a>
+            <a href="https://www.linkedin.com/in/ashleybaldock">
+              <CircleFrame>
+                <LinkedInIcon />
+              </CircleFrame>
+            </a>
+          </Footer>
         </Page>
       </FlexColumn>
     </BrowserRouter>
