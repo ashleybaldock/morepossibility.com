@@ -59,7 +59,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <FlexColumn
-        flex={'1 1 0'}
+        flex={'1 1 auto'}
         justifyContent={'flex-start'}
         className={styles.app}
       >

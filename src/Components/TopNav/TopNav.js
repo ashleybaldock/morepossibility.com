@@ -9,7 +9,7 @@ const HamburgerIcon = ({ onClick }) => {
   return (
     <div className={styles.hamburger} onClick={onClick}>
       <FlexColumn
-        flex={'1 0 0'}
+        flex={'1 0 auto'}
         justifyContent={'center'}
         wrapperElement={
           <a href="#om" aria-label="Open main menu">
@@ -56,46 +56,61 @@ export const TopNav = ({ className = '', children }) => {
         alignItems={'stretch'}
         className={`${styles.sticky} ${menuOpen ? styles.menuOpen : ''}`}
       >
+        <a
+          href="#/"
+          className={styles.backdrop}
+          tabIndex="-1"
+          aria-hidden="true"
+          hidden
+          onTouchEnd={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setMenuOpen(false);
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setMenuOpen(false);
+          }}
+        >
+          &nbsp;
+        </a>
         <FlexColumn
+          flex={'0 1 auto'}
           alignSelf={'center'}
           wrapperElement={<Puzzle />}
           className={styles.logo}
         ></FlexColumn>
-        <FlexColumn justifyContent={'center'} className={styles.title}>
+        <FlexColumn
+          flex={'0 0 auto'}
+          justifyContent={'center'}
+          className={styles.title}
+        >
           <Link to="/sitemap">More Possibility</Link>
         </FlexColumn>
         <FlexSpacer />
+        <HamburgerIcon
+          onTouchEnd={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setMenuOpen(false);
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setMenuOpen(true);
+          }}
+        />
         <FlexRow
           wrapperElement={<nav role="navigation"></nav>}
-          flex={'0 0 0'}
+          flex={'0 0 auto'}
           className={styles.mainMenu}
         >
-          <a
-            href="#/"
-            className={styles.backdrop}
-            tabIndex="-1"
-            aria-hidden="true"
-            hidden
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen(false);
-            }}
-          >
-            &nbsp;
-          </a>
           <ul className={styles.mainMenuList}>
-            <li className={styles.menuHeader}>
-              <HamburgerIcon
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMenuOpen(true);
-                }}
-              />
-            </li>
             {React.Children.map(children, (child) => (
               <li className={styles.menuItem}>
                 <FlexColumn
-                  flex={'1 0 0'}
+                  flex={'1 0 auto'}
                   justifyContent={'center'}
                   alignItems={'flex-end'}
                   wrapperElement={React.cloneElement(child, {
