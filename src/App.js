@@ -4,6 +4,7 @@ import {
   Blog,
   Code,
   Contact,
+  socialLinks,
   EntropyUI,
   Localhost,
   Magiclights,
@@ -17,18 +18,14 @@ import {
   SixOrNot,
   Welcome,
 } from './Pages';
+import { Footer, Page, TopNav } from 'Components';
 import {
-  CircleFrame,
-  InstagramIcon,
-  FacebookIcon,
-  GitHubIcon,
-  LinkedInIcon,
-  YouTubeIcon,
-  Footer,
-  Page,
-  TopNav,
-} from 'Components';
-import { FlexColumn, FlexSpacer } from 'entropy-ui';
+  BrowserTitle,
+  FlexRow,
+  FlexColumn,
+  FlexSpacer,
+  SocialLink,
+} from 'entropy-ui';
 import styles from './App.module.css';
 
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
@@ -38,7 +35,7 @@ const routes = [
   { path: ['/welcome', '/'], exact: true, name: 'Welcome', component: Welcome },
   { path: '/sitemap', name: 'Sitemap', component: Sitemap },
   {
-    path: '/me/services',
+    path: '/services',
     name: 'Development Services',
     shortName: 'Services',
     component: Services,
@@ -62,12 +59,13 @@ const routes = [
   { path: '/code/sixornot', name: 'SixOrNot', component: SixOrNot },
   { path: '/code/localhost', name: 'This Site', component: Localhost },
   { path: '/code', name: 'Code', component: Code },
-  { path: '/contact', name: 'Contact', component: Contact },
+  { path: '/connect', name: 'Connect', component: Contact },
 ];
 
 export const App = () => {
   return (
     <BrowserRouter>
+      <BrowserTitle title={`More Possibility`} />
       <FlexColumn
         flex={'1 1 auto'}
         justifyContent={'flex-start'}
@@ -75,11 +73,11 @@ export const App = () => {
       >
         <TopNav>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/me">About</NavLink>
+          <NavLink to="/services">Services</NavLink>
           <NavLink to="/art">Art</NavLink>
           <NavLink to="/code">Code</NavLink>
           <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/connect">Connect</NavLink>
         </TopNav>
         <Page>
           <Switch>
@@ -92,31 +90,27 @@ export const App = () => {
           </Switch>
           <FlexSpacer />
           <Footer className={styles.footer}>
-            <a href="https://www.instagram.com/more.possibility">
-              <CircleFrame>
-                <InstagramIcon />
-              </CircleFrame>
-            </a>
-            <a href="https://www.youtube.com/channel/UC_xZBH-1MsJkh3S-u5TttJA">
-              <CircleFrame>
-                <YouTubeIcon />
-              </CircleFrame>
-            </a>
-            <a href="https://github.com/ashleybaldock">
-              <CircleFrame>
-                <GitHubIcon />
-              </CircleFrame>
-            </a>
-            <a href="https://www.facebook.com/morepossibility">
-              <CircleFrame>
-                <FacebookIcon />
-              </CircleFrame>
-            </a>
-            <a href="https://www.linkedin.com/in/ashleybaldock">
-              <CircleFrame>
-                <LinkedInIcon />
-              </CircleFrame>
-            </a>
+            <Switch>
+              <Route exact={true} path={'/connect'} />
+              <Route>
+                {socialLinks
+                  .filter(({ core }) => core === true)
+                  .map(({ text, icon, href }, i) => (
+                    <FlexRow
+                      key={i}
+                      alignItems={'center'}
+                      flex={'0 0 auto'}
+                      wrapperElement={
+                        <SocialLink
+                          className={styles.socialLink}
+                          icon={icon}
+                          href={href}
+                        ></SocialLink>
+                      }
+                    ></FlexRow>
+                  ))}
+              </Route>
+            </Switch>
           </Footer>
         </Page>
       </FlexColumn>

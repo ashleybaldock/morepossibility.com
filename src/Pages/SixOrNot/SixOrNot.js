@@ -223,7 +223,7 @@ const wrapWithHashLink = (text, anchor) => {
   return <HashLink to={`#${anchor}`}>{text}</HashLink>;
 };
 
-export const SixOrNot = ({ ...props }) => {
+export const SixOrNot = () => {
   return (
     <PageSection>
       <PageHeading>Code &gt; SixOrNot</PageHeading>

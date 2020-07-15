@@ -1,0 +1,19 @@
+.socialLink {
+  min-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .socialLink {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .socialLink {
+    min-width: 33%;
+  }
+}
+
+.circleFrame {
+  margin-left: 2em;
+}

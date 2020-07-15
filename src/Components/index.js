@@ -1,6 +1,5 @@
 export * from './ArtGallery';
 export * from './ArtGalleryItem';
-export * from './CircleFrame';
 export * from './CodeBlock';
 export * from './Footer';
 export * from './Icons';
