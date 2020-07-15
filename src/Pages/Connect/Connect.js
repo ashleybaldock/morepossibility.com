@@ -10,7 +10,7 @@ import {
   YouTubeIcon,
 } from 'entropy-ui';
 import { PageHeading, PageSubHeading1, PageSection } from 'Components';
-import styles from './Contact.module.css';
+import styles from './Connect.module.css';
 
 export const socialLinks = [
   {
@@ -51,7 +51,7 @@ export const socialLinks = [
   },
 ];
 
-export const Contact = ({ className = '' }) => {
+export const Connect = ({ className = '' }) => {
   return (
     <PageSection className={className}>
       <PageHeading>Connect</PageHeading>

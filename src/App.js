@@ -3,7 +3,7 @@ import {
   Art,
   Blog,
   Code,
-  Contact,
+  Connect,
   socialLinks,
   EntropyUI,
   Localhost,
@@ -59,7 +59,7 @@ const routes = [
   { path: '/code/sixornot', name: 'SixOrNot', component: SixOrNot },
   { path: '/code/localhost', name: 'This Site', component: Localhost },
   { path: '/code', name: 'Code', component: Code },
-  { path: '/connect', name: 'Connect', component: Contact },
+  { path: '/connect', name: 'Connect', component: Connect },
 ];
 
 export const App = () => {
