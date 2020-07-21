@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageHeading, PageParagraph } from 'Components';
-import styles from './Localhost.module.css';
+// import styles from './Localhost.module.css';
 
 export const Localhost = ({ ...props }) => {
   return (

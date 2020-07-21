@@ -11,8 +11,7 @@ import {
   TableOfContents,
   TextEmphasis,
 } from 'Components';
-import { FlexColumn } from 'entropy-ui';
-import { HashLink } from 'react-router-hash-link';
+import { HashLink, Link } from 'react-router-hash-link';
 import styles from './SixOrNot.module.css';
 
 const IconListItem = ({ src, children }) => {
@@ -311,7 +310,9 @@ const wrapWithHashLink = (text, anchor) => {
 export const SixOrNot = () => {
   return (
     <PageSection>
-      <PageHeading>Code &gt; SixOrNot</PageHeading>
+      <PageHeading>
+        <Link to="/code">Code</Link> &gt; SixOrNot
+      </PageHeading>
       <TableOfContents
         data={sections}
         anchorKey={'anchor'}

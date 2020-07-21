@@ -13,3 +13,6 @@
   min-height: 24px;
 }
 
+.iconListItem:first-child {
+  margin-top: 0;
+}

@@ -6,7 +6,7 @@ import {
   PageParagraph,
   PageSection,
 } from 'Components';
-import styles from './Services.module.css';
+// import styles from './Services.module.css';
 
 export const Services = () => {
   return (

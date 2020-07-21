@@ -5,7 +5,7 @@ import styles from './Puzzle.module.css';
 const awaiting = () => <></>;
 
 const Wrap = ({ d, className = '', ...props }) => {
-  const [text, setText] = React.useState({ x: 0, y: 0, visible: false });
+  const [, setText] = React.useState({ x: 0, y: 0, visible: false });
 
   const pathRef = React.useCallback((pathNode) => {
     if (!pathNode) {

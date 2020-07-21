@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PuzzlePiece.module.css';
+// import styles from './PuzzlePiece.module.css';
 
 export const PuzzlePiece = ({
   name,

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FlexColumn, FlexRow } from 'entropy-ui';
+import { FlexColumn } from 'entropy-ui';
 import {
-  ArtGallery,
   ArtGalleryItem,
   PageHeading,
   PageParagraph,
@@ -14,7 +13,8 @@ export const Art = ({ className = '' }) => {
     <PageSection className={className}>
       <PageHeading>Art projects</PageHeading>
       <PageParagraph>
-        I like to create art using software and LED lighting. Select an installation below for more information.
+        I like to create art using software and LED lighting. Select an
+        installation below for more information.
       </PageParagraph>
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge2`}></Link>}>
         <ArtGalleryItem
