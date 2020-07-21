@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { PageHeading, PageParagraph, PageSection } from 'Components';
 // import styles from './Localhost.module.css';
 
 export const Localhost = ({ className }) => {
   return (
     <PageSection className={`${className}`}>
-      <PageHeading>
-        About this website
-      </PageHeading>
+      <PageHeading>About this website</PageHeading>
       <PageParagraph>
         I created this site by hand using React; source code is available{' '}
         <a href="https://github.com/ashleybaldock/morepossibility.com">
