@@ -2,3 +2,7 @@
   margin: 0.8em 0;
   line-height: 1.5em;
 }
+
+.paragraph a {
+  text-decoration: underline;
+}

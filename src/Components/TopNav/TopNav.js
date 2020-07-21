@@ -78,15 +78,21 @@ export const TopNav = ({ className = '', children }) => {
         <FlexColumn
           flex={'0 1 auto'}
           alignSelf={'center'}
-          wrapperElement={<Puzzle />}
-          className={styles.logo}
-        ></FlexColumn>
+          wrapperElement={<Link to="/sitemap"></Link>}
+        >
+          <FlexColumn
+            flex={'0 1 auto'}
+            alignSelf={'center'}
+            wrapperElement={<Puzzle />}
+            className={styles.logo}
+          ></FlexColumn>
+        </FlexColumn>
         <FlexColumn
           flex={'0 0 auto'}
           justifyContent={'center'}
           className={styles.title}
         >
-          <Link to="/sitemap">More Possibility</Link>
+          <Link to="/">More Possibility</Link>
         </FlexColumn>
         <FlexSpacer />
         <HamburgerIcon

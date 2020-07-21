@@ -15,9 +15,9 @@ export const Welcome = ({ className = '', ...props }) => {
         <PageParagraph>
           More Possibility is all about creating{' '}
           <Link to={`/tools`}>tools</Link> to enable artists to add light and
-          movement to their projects through the use of inexpensive, widely
-          available LED modules coupled with an intuitive, powerful, and elegant
-          software interface.
+          movement to their projects. I do this through the use of inexpensive,
+          widely available LED modules coupled with an intuitive, powerful, and
+          elegant software interface.
         </PageParagraph>
         <PageParagraph>
           I also use this system to create my own art – small scale, especially
