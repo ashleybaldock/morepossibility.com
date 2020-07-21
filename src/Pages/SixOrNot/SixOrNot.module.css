@@ -1,8 +1,15 @@
+.iconList {
+  margin: 1em 1em;
+  padding: 0.5em;
+}
 
-.imageCentered {
-  margin: 0.8em 0;
-  align-self: center;
+.iconListItem {
+  list-style: none;
+  background-repeat: no-repeat;
+  background-position: center left;
+  margin: 1.5em 0;
+  padding-left: 64px;
+  vertical-align: middle;
+  min-height: 24px;
 }
-.imageCentered > img {
-  max-width: 80vw;
-}
+

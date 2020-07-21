@@ -25,8 +25,11 @@ export const Welcome = ({ className = '', ...props }) => {
           scale installations including the Phenoforge.
         </PageParagraph>
         <PageParagraph>
-          I also offer Software Development and Agile contract services,
-          specialising in React/node.js web and app development.
+          I also offer{' '}
+          <Link to={'/services'}>
+            Software Development and Agile contract services
+          </Link>
+          , specialising in React/node.js web and app development.
         </PageParagraph>
       </PageSection>
     </>

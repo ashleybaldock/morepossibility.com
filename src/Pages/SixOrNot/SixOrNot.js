@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  ArtGalleryItem,
   LicenceBlock,
   PageHeading,
   PageSubHeading1,
@@ -14,11 +15,14 @@ import { FlexColumn } from 'entropy-ui';
 import { HashLink } from 'react-router-hash-link';
 import styles from './SixOrNot.module.css';
 
-const ImageCentered = ({ src, alt, className, ...props }) => {
+const IconListItem = ({ src, children }) => {
   return (
-    <FlexColumn flex={'1 1 auto'} className={styles.imageCentered}>
-      <img src={src} alt={alt} {...props} />
-    </FlexColumn>
+    <li
+      className={styles.iconListItem}
+      style={{ backgroundImage: `url('${src}')` }}
+    >
+      {children}
+    </li>
   );
 };
 
@@ -118,9 +122,90 @@ const sections = [
         anchor: 'interface-icons',
         heading: 'Icon Meanings',
         content: (
-          <>
-            <PageParagraph></PageParagraph>
-          </>
+          <ul className={styles.iconList}>
+            <IconListItem src="/images/code/sixornot/proxy_on.png">
+              This icon indicates that a proxy was used for the most recent
+              connection to this host. On mouseover the tooltip gives
+              information about the type of proxy used, as well as a warning if
+              DNS lookups were disabled (see proxy section below).
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/trr.png">
+              This icon indicates that DNS resolution for this host made use of
+              the Trusted Recursive Resolver mechanism - see{' '}
+              <a href="https://wiki.mozilla.org/Trusted_Recursive_Resolver">
+                https://wiki.mozilla.org/Trusted_Recursive_Resolver
+              </a>{' '}
+              for more details.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_4only_cg_24.png">
+              This icon indicates that Firefox connected to this domain using
+              IPv4 and only A (IPv4) records were returned for the domain.
+              Either your DNS is not capable of returning AAAA records or (more
+              likely) the domain in question supports only the legacy version of
+              the Internet Protocol suite. Why not ask why they haven't upgraded
+              yet?{' '}
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_6and4_cg_24.png">
+              This icon indicates that Firefox connected to this domain using
+              IPv6 and both AAAA (IPv6) and A (IPv4) records were found for the
+              domain in DNS. You should only ever see this icon if you have IPv6
+              connectivity on your machine.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_4pot6_cg_24.png">
+              This icon indicates that Firefox connected to this domain using
+              IPv4 and both AAAA (IPv6) and A (IPv4) records were found for the
+              current domain. While the remote domain does support IPv6 your
+              browser did not use it to connect. Typically this means you do not
+              have IPv6 connectivity on your machine, but even if you do
+              sometimes IPv4 is used instead for connections.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_6only_cg_24.png">
+              This icon indicates that Firefox connected to this domain using
+              IPv6 and only AAAA (IPv6) records were found for the domain in
+              DNS. This generally means that the domain in question only
+              supports IPv6. You should only ever see this icon if you have IPv6
+              connectivity on your machine.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_4only_cache_cg_24.png">
+              This icon indicates that Firefox retrieved all objects in the
+              current page from this domain from local cache (no external
+              connections were made). Only A (IPv4) records were found for this
+              domain in DNS, indicating that the domain is probably available
+              only via IPv4.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_4pot6_cache_cg_24.png">
+              This icon indicates that Firefox retrieved all objects in the
+              current page from this domain from local cache (no external
+              connections were made). Both AAAA (IPv6) and A (IPv4) records were
+              found for this domain in DNS, indicating that the domain is IPv6
+              capable.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_6only_cache_cg_24.png">
+              This icon indicates that Firefox retrieved all objects in the
+              current page from this domain from local cache (no external
+              connections were made). Only AAAA (IPv6) records were found for
+              this domain in DNS, indicating that the domain is probably
+              available only via IPv6.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_proxy_cg_24.png">
+              This icon indicates that an HTTP/HTTPS proxy was used for this
+              connection. With these types of proxies no information is
+              available about the connection made to the host (since Firefox
+              connects to the proxy which then forwards the request). For these
+              types of proxy DNS lookups are also disabled to avoid leaking
+              information about sites visited.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_error_cg_24.png">
+              This icon indicates an error occurred for the domain in question.
+            </IconListItem>
+            <IconListItem src="/images/code/sixornot/sixornot_other_cg_24.png">
+              This icon can mean a variety of things, generally it indicates
+              that no IP address information exists for the current location or
+              that there was a failure obtaining it. Try navigating to a website
+              and ensuring you are not using a Proxy and that Offline mode isn't
+              enabled.
+            </IconListItem>
+          </ul>
         ),
       },
       {
@@ -151,14 +236,14 @@ const sections = [
               sometimes DNS won't give you AAAA records for hosts. This is
               sytem/configuration dependant.
             </PageParagraph>
-            <ImageCentered
+            <ArtGalleryItem
               src="/images/code/sixornot/ss2.png"
               alt="Screenshot of the SixOrNot panel showing results for a visit to the Mozilla website"
             />
             <PageParagraph>
               Another example, here all connections are made over IPv6.
             </PageParagraph>
-            <ImageCentered
+            <ArtGalleryItem
               src="/images/code/sixornot/ss1.png"
               alt="Screenshot of the SixOrNot panel showing results for a visit to the Google homepage using only IPv6"
             />
