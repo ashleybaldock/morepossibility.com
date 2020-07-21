@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import {
   ArtGalleryItem,
   LicenceBlock,
@@ -11,7 +13,6 @@ import {
   TableOfContents,
   TextEmphasis,
 } from 'Components';
-import { HashLink, Link } from 'react-router-hash-link';
 import styles from './SixOrNot.module.css';
 
 const IconListItem = ({ src, children }) => {
@@ -26,6 +27,21 @@ const IconListItem = ({ src, children }) => {
 };
 
 const sections = [
+  {
+    anchor: 'download',
+    heading: 'Download',
+    content: (
+      <>
+        <PageParagraph>
+          You can download SixOrNot from the{' '}
+          <a href="https://addons.mozilla.org/en-GB/firefox/addon/sixornot/">
+            Mozilla Addons
+          </a>{' '}
+          page.
+        </PageParagraph>
+      </>
+    ),
+  },
   {
     anchor: 'introduction',
     heading: 'Introduction',
@@ -310,9 +326,7 @@ const wrapWithHashLink = (text, anchor) => {
 export const SixOrNot = () => {
   return (
     <PageSection>
-      <PageHeading>
-        <Link to="/code">Code</Link> &gt; SixOrNot
-      </PageHeading>
+      <PageHeading>SixOrNot</PageHeading>
       <TableOfContents
         data={sections}
         anchorKey={'anchor'}

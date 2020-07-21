@@ -1,13 +1,16 @@
 import React from 'react';
-import { PageHeading, PageParagraph } from 'Components';
+import { Link } from 'react-router-dom';
+import { PageHeading, PageParagraph, PageSection } from 'Components';
 // import styles from './Localhost.module.css';
 
-export const Localhost = ({ ...props }) => {
+export const Localhost = ({ className }) => {
   return (
-    <>
-      <PageHeading>About this website</PageHeading>
+    <PageSection className={`${className}`}>
+      <PageHeading>
+        About this website
+      </PageHeading>
       <PageParagraph>
-        I coded this site by hand using React, source code is available{' '}
+        I created this site by hand using React; source code is available{' '}
         <a href="https://github.com/ashleybaldock/morepossibility.com">
           on GitHub
         </a>
@@ -27,6 +30,6 @@ export const Localhost = ({ ...props }) => {
         libraries already exist, but I wanted to learn. The site is hosted via{' '}
         <a href="https://www.netlify.com/">Netlify</a>.
       </PageParagraph>
-    </>
+    </PageSection>
   );
 };

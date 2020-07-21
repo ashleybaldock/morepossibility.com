@@ -1,0 +1,15 @@
+.preview {
+  min-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .preview {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .preview {
+    min-width: 33%;
+  }
+}
