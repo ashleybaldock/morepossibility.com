@@ -1,11 +1,11 @@
 import React from 'react';
+import { PageHeading, PageSection } from 'Components';
 // import styles from './NoMatch.module.css';
 
-export const NoMatch = ({ className = '', children, ...props }) => {
+export const NoMatch = ({ className = '' }) => {
   return (
-    <div className={`${className}`}>
-      404
-      {children}
-    </div>
+    <PageSection className={className}>
+      <PageHeading>404 - Page not found</PageHeading>
+    </PageSection>
   );
 };
