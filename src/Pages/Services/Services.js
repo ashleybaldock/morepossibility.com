@@ -27,7 +27,7 @@ export const Services = () => {
         TDD), CI/CD technologies, project management, and agile delivery.
       </PageParagraph>
       <PageParagraph>
-        Please see <Link to={'/cv'}>my CV</Link> for more, or{' '}
+        Please see <a href={'/cv.pdf'}>my CV</a> for more, or{' '}
         <Link to={'/connect'}>connect with me</Link> to find out how I can bring
         value to your project.
       </PageParagraph>
