@@ -4,11 +4,10 @@ import {
   PageParagraph,
   PageSection,
   PageSubHeading1,
-  PageSubHeading2,
 } from 'Components';
 import { BlogDateStamp } from '../BlogDateStamp';
 import { BlogCreativeCommons } from '../BlogCreativeCommons';
-// import styles from './BlogPost.module.css';
+import styles from './BlogPost.module.css';
 
 export const BlogPost = ({ className = '', children, ...props }) => {
   return (
@@ -43,6 +42,13 @@ export const BlogPost = ({ className = '', children, ...props }) => {
         If I keep it going, expect to see musings on philosophy, inevitability,
         technology, society - who knows. Mostly I just needed a first post to
         start building a blog engine around. Let's see how this goes.
+      </PageParagraph>
+      <PageParagraph className={styles.commentLink}>
+        <a
+          href={'https://github.com/ashleybaldock/morepossibility.com/compare'}
+        >
+          Add a comment
+        </a>
       </PageParagraph>
       <BlogCreativeCommons />
     </PageSection>

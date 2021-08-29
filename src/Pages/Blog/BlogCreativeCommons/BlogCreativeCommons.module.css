@@ -1,9 +1,16 @@
+.creativeCommons {
+  opacity: 0.6;
+  font-size: 90%;
+  align-self: center;
+  margin-top: 3em;
+}
+
 .link {
   display: inline-block;
 }
 
 .icon {
-  height: 22px !important;
+  height: 1em !important;
   margin-left: 3px;
-  vertical-align: text-bottom;
+  vertical-align: text-top;
 }

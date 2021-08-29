@@ -6,10 +6,14 @@ export const BlogCreativeCommons = ({ className = '', children, ...props }) => {
   return (
     <TextMonospaced>
       <p
-        xmlnsCc="http://creativecommons.org/ns#"
-        xmlnsDct="http://purl.org/dc/terms/"
+        className={styles.creativeCommons}
+        {...{
+          'xmlns:cc': 'http://creativecommons.org/ns#',
+          'xmlns:dct': 'http://purl.org/dc/terms/',
+        }}
       >
         <a
+          className={styles.link}
           property="dct:title"
           rel="cc:attributionURL"
           href="https://morepossibility.com/blog"
@@ -18,6 +22,7 @@ export const BlogCreativeCommons = ({ className = '', children, ...props }) => {
         </a>{' '}
         is licensed under{' '}
         <a
+          className={styles.link}
           href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
           target="_blank"
           rel="license noopener noreferrer"
