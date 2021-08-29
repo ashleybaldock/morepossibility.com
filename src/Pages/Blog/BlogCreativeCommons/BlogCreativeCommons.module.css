@@ -1,0 +1,9 @@
+.link {
+  display: inline-block;
+}
+
+.icon {
+  height: 22px !important;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+}
