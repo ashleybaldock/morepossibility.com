@@ -32,11 +32,15 @@ const sections = [
     content: (
       <>
         <PageParagraph>
-          You can download SixOrNot from the{' '}
-          <a href="https://addons.mozilla.org/en-GB/firefox/addon/sixornot/">
-            Mozilla Addons
-          </a>{' '}
-          page.
+          Sadly at present SixOrNot is de-listed from the Mozilla addons site.
+          This is due to its' dependency on knockout.js (which uses
+          unsafe-eval), which is a pretty archaic library at this point. I am in
+          the process of re-writing the frontend to use React, so hopefully
+          it'll come back someday.
+        </PageParagraph>
+        <PageParagraph>
+          In the meantime you can download the most recent signed SixOrNot xpi
+          from here: <a href="/sixornot-3.3.0-fx.xpi">sixornot-3.3.0-fx.xpi</a>.
         </PageParagraph>
       </>
     ),
