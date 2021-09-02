@@ -14,6 +14,162 @@ export const BlogPost = ({ className = '', children, ...props }) => {
     <PageSection className={`${className}`}>
       <PageHeading>Blog</PageHeading>
 
+      <PageSubHeading1>UK Age Appropriate Design Code</PageSubHeading1>
+      <BlogDateStamp>02-09-2021</BlogDateStamp>
+      <PageParagraph>
+        Today the UK implements the{' '}
+        <a href="https://5rightsfoundation.com/our-work/design-of-service/age-appropriate-design-code.html">
+          Age Appropriate Design Code
+        </a>{' '}
+        a{' '}
+        <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/ico-codes-of-practice/age-appropriate-design-a-code-of-practice-for-online-services/code-standards/">
+          set of standards
+        </a>{' '}
+        aimed at protecting children in their use of the Internet. This is
+        broadly based on the{' '}
+        <a href="https://downloads.unicef.org.uk/wp-content/uploads/2010/05/UNCRC_united_nations_convention_on_the_rights_of_the_child.pdf">
+          United Nations Convention on the Rights of the Child
+        </a>
+        . This is actually quite a well thought out bit of legislation by the
+        looks of things.
+      </PageParagraph>
+
+      <PageParagraph>
+        But I am curious, why do these protections end when you turn 18? What
+        exactly about that list of protections ought not to apply to someone at
+        age 19, or 30, or 60? Why is the privacy of an adult worth so much less
+        than the privacy of a child? Yes, this is based on the assumption that
+        adults can consensually engage with their own privacy but that
+        assumption is based on two things; that they are educated and empowered
+        enough to be able to understand the systems they are using, and that
+        those systems actually respect and make it possible (and at least
+        somewhat easy) to actually implement those intentional conscious
+        choices. And given the length and complexity of most services' privacy
+        policies and terms of use, and the complexity of data protection
+        legislation in differing jurisdictions, I think both of those points are
+        laughable.
+      </PageParagraph>
+
+      <PageParagraph>
+        How about this - replacing the word 'child' with the word 'user' - does
+        this sound like an unreasonable expectation for the design of digital
+        services? I certainly wouldn't mind if all digital systems had to
+        conform to a code like this. (Modified from the text available on{' '}
+        <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/ico-codes-of-practice/age-appropriate-design-a-code-of-practice-for-online-services/code-standards/">
+          ICO website
+        </a>
+        .)
+      </PageParagraph>
+
+      <ol>
+        <li>
+          <b>Best interests of the user:</b> The best interests of the user
+          should be a primary consideration when you design and develop online
+          services.
+        </li>
+
+        <li>
+          <b>Data protection impact assessments:</b> Undertake a DPIA to assess
+          and mitigate risks to the rights and freedoms of users accessing your
+          service, which arise from your data processing. Take into account
+          differing ages, capacities and development needs and ensure that your
+          DPIA builds in compliance with this code.
+        </li>
+
+        <li>
+          <b>Consistent application:</b> Apply the standards in this code to all
+          your users.
+        </li>
+
+        <li>
+          <b>Transparency:</b> The privacy information you provide to users, and
+          other published terms, policies and community standards, must be
+          concise, prominent and in clear language. Provide additional specific
+          ‘bite-sized’ explanations about how you use personal data at the point
+          that use is activated.
+        </li>
+
+        <li>
+          <b>Detrimental use of data:</b> Do not use users' personal data in
+          ways that have been shown to be detrimental to their wellbeing, or
+          that go against industry codes of practice, other regulatory
+          provisions or Government advice.
+        </li>
+
+        <li>
+          <b>Policies and community standards:</b> Uphold your own published
+          terms, policies and community standards (including but not limited to
+          privacy policies, age restriction, behaviour rules and content
+          policies).
+        </li>
+
+        <li>
+          <b>Default settings:</b> Settings must be ‘high privacy’ by default
+          (unless you can demonstrate a compelling reason for a different
+          default setting, taking account of the best interests of the user).
+        </li>
+
+        <li>
+          <b>Data minimisation:</b> Collect and retain only the minimum amount
+          of personal data you need to provide the elements of your service in
+          which a user is actively and knowingly engaged. Give users separate
+          choices over which elements they wish to activate.
+        </li>
+
+        <li>
+          <b>Data sharing:</b> Do not disclose users' data unless you can
+          demonstrate a compelling reason to do so, taking account of the best
+          interests of the user.
+        </li>
+
+        <li>
+          <b>Geolocation:</b> Switch geolocation options off by default (unless
+          you can demonstrate a compelling reason for geolocation to be switched
+          on by default, taking account of the best interests of the user).
+          Provide an obvious sign for users when location tracking is active.
+          Options which make a user's location visible to others must default
+          back to ‘off’ at the end of each session.
+        </li>
+
+        <li>
+          <b>Parental controls:</b> If you provide controls that allow one user
+          to control the actions of another, give the user appropriate
+          information about this. If your online service allows a user to
+          monitor another user's online activity or track their location,
+          provide an obvious sign to the user when they are being monitored.
+        </li>
+
+        <li>
+          <b>Profiling:</b> Switch options which use profiling ‘off’ by default
+          (unless you can demonstrate a compelling reason for profiling to be on
+          by default, taking account of the best interests of the user). Only
+          allow profiling if you have appropriate measures in place to protect
+          the user from any harmful effects (in particular, being fed content
+          that is detrimental to their health or wellbeing).
+        </li>
+
+        <li>
+          <b>Nudge techniques:</b> Do not use nudge techniques to lead or
+          encourage users to provide unnecessary personal data or weaken or turn
+          off their privacy protections.
+        </li>
+
+        <li>
+          <b>Connected devices:</b> If you provide a connected device ensure you
+          include effective tools to enable conformance to this code.
+        </li>
+
+        <li>
+          <b>Online tools:</b> Provide prominent and accessible tools to help
+          users exercise their data protection rights and report concerns.
+        </li>
+      </ol>
+
+      <PageParagraph>
+        Of course, this would severely affect the ease with which businesses can
+        exploit their users for profit, so...
+      </PageParagraph>
+
       <PageSubHeading1>The joy of iteration</PageSubHeading1>
       <BlogDateStamp>29-08-2021</BlogDateStamp>
       <PageParagraph>
