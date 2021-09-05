@@ -19,7 +19,7 @@ export const Art = ({ className = '' }) => {
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge2`}></Link>}>
         <ArtGalleryItem
           src={`/images/art/phenoforge2/3d-model-1.png`}
-          name={`Phenoforge Mk.II - 2021`}
+          name={`Phenoforge Mk.II - 2022 ?`}
         />
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge1`}></Link>}>
