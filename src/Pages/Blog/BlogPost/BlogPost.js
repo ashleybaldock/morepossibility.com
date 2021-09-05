@@ -13,6 +13,97 @@ export const BlogPost = ({ className = '', children, ...props }) => {
   return (
     <PageSection className={`${className}`}>
       <PageHeading>Blog</PageHeading>
+      <PageSubHeading1>The Cookie Monster</PageSubHeading1>
+      <BlogDateStamp>05-09-2021</BlogDateStamp>
+      <PageParagraph>
+        I'm involved in a project at the moment to ensure compliance with the{' '}
+        <a href="https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/">
+          law surrounding cookies
+        </a>
+        . For those that don't know, a cookie is just a somewhat persistent
+        client-side data storage mechanism used by web browsers to enable a
+        variety of functionality in the modern web. There's actually other more
+        modern technologies for client-side data persistence but the law covers
+        that too. They have become a bit of a distraction in the discussion
+        about privacy.
+      </PageParagraph>
+
+      <PageParagraph>
+        There's different uses for client-side data storage in developing web
+        technologies. One key one is session management - ensuring that when a{' '}
+        <a href="https://en.wikipedia.org/wiki/Stateless_protocol">
+          fundamentally stateless
+        </a>{' '}
+        web browser agent is talking to a server that the server knows it is the
+        same agent between requests. Another is storing customisation/user info
+        locally for a site. There's all kinds of use cases but fundamentally
+        it's a technology that allows some information to be left on your device
+        by a server you communicate with that is then sent back to the server in
+        future.
+      </PageParagraph>
+
+      <PageParagraph>
+        This simple tool, like all tools, can be used for good or ill (and
+        whether a particular use of a tool is good or ill is an exercise for the
+        reader). Cookies can be used for tracking your use of the web, across
+        multiple sites/domains. 'Third party' cookies are ones set by
+        domains/sites other than the one you are accessing (websites/apps
+        frequently pull in resources from a variety of places). Those third
+        party cookies have traditionally been used as a fingerprinting mechanism
+        to allow advertising and other businesses to track your activity across
+        the Internet.
+      </PageParagraph>
+
+      <PageParagraph>
+        Making people aware of the impacts that erosion of their privacy has on
+        their lives is a worthy goal, but one which this law fails to really
+        help with. It's a classic case of politicians wanting to appear as if
+        they are doing something - by fixing a very visible effect of a problem
+        - rather than legislating to bring about systemic change and address the
+        actual issue.
+      </PageParagraph>
+
+      <PageParagraph>
+        Currently every website that wishes to be compliant must implement its'
+        own banner or notification that serves to inform users of how the site
+        uses client-side persistence technologies. This is a vast implementation
+        burden pushed down to the developers and maintainers of websites - and
+        also leads to a very inconsistent user experience. It also (much like
+        TLS/SSL warnings and other repetitive security/privacy theatre, e.g.
+        long-winded privacy policies/terms of use) serves to get users used to
+        clicking 'accept' because who has time for that?
+      </PageParagraph>
+
+      <PageParagraph>
+        Even in the (rare) cases that a site goes to the trouble of actually
+        providing education as to how these technologies work and their
+        implications, and even if the user reads that and understands it, it
+        still doesn't address the real issue -{' '}
+        <a href="https://theconversation.com/googles-scrapping-third-party-cookies-but-invasive-targeted-advertising-will-live-on-156530">
+          you don't need client side persistence to track people anymore
+        </a>
+        .
+      </PageParagraph>
+
+      <PageParagraph>
+        So all this law is currently doing, really, is wasting developers' time,
+        training users to ignore warnings/education about their privacy, and
+        distracting from a very real growing issue around how large companies
+        have a vast amount of latent power over the lives and wellbeing of
+        people - both now and increasingly into an uncertain future.
+      </PageParagraph>
+
+      <PageParagraph>
+        If I were to be involved in making law around educating users about
+        client-side persistence technologies (and digital privacy more
+        generally) I'd suggest requiring browser makers (and other portals to
+        the internet) to provide actual useful education at point of first use.
+        Ensure there's a consistent experience of consent based on adequate
+        information, and focus on empowering people to navigate and leverage the
+        digital world we are co-creating. Ideally via both modifications to the
+        way that browsers/apps/devices and the Internet work, and via changes to
+        the education system to start preparing people for the future.
+      </PageParagraph>
 
       <PageSubHeading1>UK Age Appropriate Design Code</PageSubHeading1>
       <BlogDateStamp>02-09-2021</BlogDateStamp>
