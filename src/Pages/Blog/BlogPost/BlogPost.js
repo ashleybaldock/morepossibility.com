@@ -104,6 +104,13 @@ export const BlogPost = ({ className = '', children, ...props }) => {
         way that browsers/apps/devices and the Internet work, and via changes to
         the education system to start preparing people for the future.
       </PageParagraph>
+      <PageParagraph className={styles.commentLink}>
+        <a
+          href={'https://github.com/ashleybaldock/morepossibility.com/compare'}
+        >
+          Add a comment
+        </a>
+      </PageParagraph>
 
       <PageSubHeading1>UK Age Appropriate Design Code</PageSubHeading1>
       <BlogDateStamp>02-09-2021</BlogDateStamp>
@@ -259,6 +266,13 @@ export const BlogPost = ({ className = '', children, ...props }) => {
       <PageParagraph>
         Of course, this would severely affect the ease with which businesses can
         exploit their users for profit, so...
+      </PageParagraph>
+      <PageParagraph className={styles.commentLink}>
+        <a
+          href={'https://github.com/ashleybaldock/morepossibility.com/compare'}
+        >
+          Add a comment
+        </a>
       </PageParagraph>
 
       <PageSubHeading1>The joy of iteration</PageSubHeading1>
