@@ -13,18 +13,16 @@ export const Welcome = ({ className = '', ...props }) => {
       <PageSection>
         <PageHeading>Welcome</PageHeading>
         <PageParagraph>
-          More Possibility is all about creating <Link to={`/code`}>tools</Link>{' '}
-          to enable artists to add light and movement to their projects. I do
-          this through the use of inexpensive, widely available LED modules
-          coupled with an intuitive, powerful, and elegant software interface.
+          At More Possibility I build <Link to={`/code`}>tools</Link> which
+          empower creative people to add light and magic to their projects. I do
+          this through the use of LED modules coupled with an intuitive,
+          powerful, and elegant software interface.
         </PageParagraph>
         <PageParagraph>
-          I also use this system to create my own art – small scale, especially
-          through hacking existing lights to add movement and light, and large
-          scale installations including the Phenoforge.
+          I also use this system to create my <Link to={'/art'}>own art</Link>.
         </PageParagraph>
         <PageParagraph>
-          I also offer{' '}
+          Also available,{' '}
           <Link to={'/services'}>
             Software Development and Agile contract services
           </Link>
