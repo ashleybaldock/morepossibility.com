@@ -18,8 +18,20 @@ export const Art = ({ className = '' }) => {
       </PageParagraph>
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge2`}></Link>}>
         <ArtGalleryItem
-          src={`/images/art/phenoforge2/3d-model-1.png`}
-          name={`Phenoforge Mk.II - 2022 ?`}
+          src={`/images/art/phenoforge2/mkII-blue-cropped.jpg`}
+          name={`Phenoforge Mk.II - 2022`}
+        />
+      </FlexColumn>
+      <FlexColumn wrapperElement={<Link to={`/art/microburn2021`}></Link>}>
+        <ArtGalleryItem
+          src={`/images/art/microburn2021/organza1.jpg`}
+          name={`Microburn - 2021`}
+        />
+      </FlexColumn>
+      <FlexColumn wrapperElement={<Link to={`/art/microburn2019`}></Link>}>
+        <ArtGalleryItem
+          src={`/images/art/microburn2019/yurt-organza1.jpg`}
+          name={`Microburn - 2019`}
         />
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge1`}></Link>}>
