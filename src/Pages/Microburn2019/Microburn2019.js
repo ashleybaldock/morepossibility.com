@@ -11,7 +11,7 @@ import {
 export const Microburn2019 = ({ className = '', children, ...props }) => {
   return (
     <PageSection className={className}>
-      <PageHeading>Microburn 2021 Decor Collabs</PageHeading>
+      <PageHeading>Yurt decor with organza (@ Microburn - 2019)</PageHeading>
       <PageParagraph>
         The Microburn site has several beautiful yurts - I decorated one using a
         combination of LEDs and organza to create a beautiful cosy space to
