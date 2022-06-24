@@ -11,7 +11,7 @@ import styles from './Microburn2021.module.css';
 export const Microburn2021 = ({ className = '', children, ...props }) => {
   return (
     <PageSection className={className}>
-      <PageHeading>Art projects</PageHeading>
+      <PageHeading>Microburn 2021 Decor Collabs</PageHeading>
       <PageParagraph>
         I supplied lighting and creative consultation for a few different
         beautiful decor installations at Microburn in 2021.
@@ -19,7 +19,7 @@ export const Microburn2021 = ({ className = '', children, ...props }) => {
       <FlexColumn>
         <ArtGalleryItem
           src={`/images/art/microburn2021/organza1.jpg`}
-          name={`LEDs with organza in the Deadly White Shades structure`}
+          name={`LEDs with organza in the Deadly White Shades structure.`}
         />
       </FlexColumn>
       <FlexColumn alignItems={'center'}>
@@ -29,7 +29,9 @@ export const Microburn2021 = ({ className = '', children, ...props }) => {
             type={'video/mp4'}
           />
         </video>
-        <FlexRow className={styles.text}>{`LEDs with industrial tubing creates a tentacle monster emerging from bushes`}</FlexRow>
+        <FlexRow
+          className={styles.text}
+        >{`LEDs with industrial tubing creates a tentacle monster emerging from bushes.`}</FlexRow>
       </FlexColumn>
     </PageSection>
   );
