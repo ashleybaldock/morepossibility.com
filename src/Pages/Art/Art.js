@@ -42,7 +42,7 @@ export const Art = ({ className = '' }) => {
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge1`}></Link>}>
         <ArtGalleryItem
-          src={`/images/art/phenoforge1/IMG_0286.jpg`}
+          src={`/images/art/phenoforge1/phenoforge-1.jpg`}
           name={`Phenoforge (Burning Nest, 2018 & 2019)`}
         />
       </FlexColumn>

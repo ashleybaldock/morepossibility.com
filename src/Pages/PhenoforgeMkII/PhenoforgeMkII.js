@@ -14,7 +14,9 @@ export const PhenoforgeMkII = ({ className = '', children, ...props }) => {
       <PageHeading>Phenoforge Mk.II (Debut @ Burning Nest 2022)</PageHeading>
       <PageParagraph>
         After a delay of 2 years, finally seeing this upgrade to my Phenoforge
-        installation constructed and working was immensely satisfying.
+        installation constructed and working was immensely satisfying. More than
+        doubling the LED count (up to 4800), and providing headroom to dance and
+        move inside, this scale-up takes a proven concept to the next level.
       </PageParagraph>
       <FlexColumn>
         <ArtGalleryItem
