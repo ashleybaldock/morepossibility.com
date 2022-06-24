@@ -21,7 +21,7 @@ import {
   SixOrNot,
   Welcome,
 } from './Pages';
-import { Footer, Page, TopNav } from 'Components';
+import { Footer, Page, ScrollToTop, TopNav } from 'Components';
 import {
   BrowserTitle,
   FlexRow,
@@ -95,6 +95,7 @@ const routes = [
 export const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <BrowserTitle title={`More Possibility`} />
       <FlexColumn
         flex={'1 1 auto'}

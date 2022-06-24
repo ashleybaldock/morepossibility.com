@@ -14,6 +14,7 @@ export * from './PageSubHeading2';
 export * from './Permalink';
 export * from './Puzzle';
 export * from './QuoteBlock';
+export * from './ScrollToTop';
 export * from './TableOfContents';
 export * from './TextEmphasis';
 export * from './TextMonospaced';
