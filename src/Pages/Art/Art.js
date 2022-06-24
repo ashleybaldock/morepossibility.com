@@ -36,7 +36,7 @@ export const Art = ({ className = '' }) => {
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/microburn2019`}></Link>}>
         <ArtGalleryItem
-          src={`/images/art/microburn2019/yurt-organza1.jpg`}
+          src={`/images/art/microburn2019/yurt-organza-1.jpg`}
           name={`Yurt decor w/ organza (Microburn - 2019)`}
         />
       </FlexColumn>
