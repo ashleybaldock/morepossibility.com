@@ -46,12 +46,6 @@ export const Art = ({ className = '' }) => {
           name={`Phenoforge (Burning Nest, 2018 & 2019)`}
         />
       </FlexColumn>
-      <video autoPlay muted loop>
-        <source
-          src={'/images/art/microburn2021/tentacles1.mp4'}
-          type={'video/mp4'}
-        />
-      </video>
     </PageSection>
   );
 };

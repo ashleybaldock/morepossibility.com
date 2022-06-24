@@ -10,6 +10,9 @@ import {
   Magiclights,
   Me,
   NoMatch,
+  Microburn2019,
+  Microburn2021,
+  Nest2022Decor,
   Phenoforge,
   PhenoforgeMkI,
   PhenoforgeMkII,
@@ -46,6 +49,21 @@ const routes = [
     path: '/art/phenoforge2',
     name: 'Phenoforge Mk.II',
     component: PhenoforgeMkII,
+  },
+  {
+    path: '/art/nest2022decor',
+    name: 'Nest 2022 Decor Collab',
+    component: Nest2022Decor,
+  },
+  {
+    path: '/art/microburn2021',
+    name: 'Microburn 2021 Decor Collab',
+    component: Microburn2021,
+  },
+  {
+    path: '/art/microburn2019',
+    name: 'Microburn 2019 Yurt Decor',
+    component: Microburn2019,
   },
   {
     path: '/art/phenoforge1',
