@@ -19,27 +19,39 @@ export const Art = ({ className = '' }) => {
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge2`}></Link>}>
         <ArtGalleryItem
           src={`/images/art/phenoforge2/mkII-blue-cropped.jpg`}
-          name={`Phenoforge Mk.II - 2022`}
+          name={`Phenoforge Mk.II (Burning Nest, 2022)`}
+        />
+      </FlexColumn>
+      <FlexColumn wrapperElement={<Link to={`/art/nest2022decor`}></Link>}>
+        <ArtGalleryItem
+          src={`/images/art/nest2022decor/marquee-1.jpg`}
+          name={`Decor collab (Burning Nest, 2022)`}
         />
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/microburn2021`}></Link>}>
         <ArtGalleryItem
           src={`/images/art/microburn2021/organza1.jpg`}
-          name={`Microburn - 2021`}
+          name={`Decor collab (Microburn, 2021`}
         />
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/microburn2019`}></Link>}>
         <ArtGalleryItem
           src={`/images/art/microburn2019/yurt-organza1.jpg`}
-          name={`Microburn - 2019`}
+          name={`Yurt decor w/ organza (Microburn - 2019)`}
         />
       </FlexColumn>
       <FlexColumn wrapperElement={<Link to={`/art/phenoforge1`}></Link>}>
         <ArtGalleryItem
           src={`/images/art/phenoforge1/IMG_0286.jpg`}
-          name={`Phenoforge - 2018, 2019`}
+          name={`Phenoforge (Burning Nest, 2018 & 2019)`}
         />
       </FlexColumn>
+      <video autoPlay muted loop>
+        <source
+          src={'/images/art/microburn2021/tentacles1.mp4'}
+          type={'video/mp4'}
+        />
+      </video>
     </PageSection>
   );
 };
