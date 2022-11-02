@@ -23,7 +23,7 @@ export const socialLinks = [
     core: false,
     text: 'YouTube',
     icon: <YouTubeIcon />,
-    href: 'https://www.youtube.com/channel/UC_xZBH-1MsJkh3S-u5TttJA',
+    href: 'https://youtube.com/@more.possibility',
   },
   {
     core: true,
